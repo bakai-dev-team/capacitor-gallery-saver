@@ -13,24 +13,28 @@ npx cap sync
 
 <docgen-index>
 
-* [`echo(...)`](#echo)
+* [`saveAuto(...)`](#saveauto)
 
 </docgen-index>
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
-### echo(...)
+### saveAuto(...)
 
 ```typescript
-echo(options: { value: string; }) => Promise<{ value: string; }>
+saveAuto(options: { uri: string; album?: string; }) => Promise<{ saved: boolean; uri?: string; }>
 ```
 
-| Param         | Type                            |
-| ------------- | ------------------------------- |
-| **`options`** | <code>{ value: string; }</code> |
+Сохраняет файл в галерею.
+Если uri указывает на PDF — рендерит первую страницу в JPEG и сохраняет.
+Если uri указывает на JPEG/PNG — сохраняет как есть.
 
-**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+| Param         | Type                                          |
+| ------------- | --------------------------------------------- |
+| **`options`** | <code>{ uri: string; album?: string; }</code> |
+
+**Returns:** <code>Promise&lt;{ saved: boolean; uri?: string; }&gt;</code>
 
 --------------------
 

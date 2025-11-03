@@ -1,0 +1,40 @@
+{
+  "api": {
+    "name": "GallerySaverPlugin",
+    "slug": "gallerysaverplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "saveAuto",
+        "signature": "(options: { uri: string; album?: string; }) => Promise<{ saved: boolean; uri?: string; }>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ uri: string; album?: string | undefined; }"
+          }
+        ],
+        "returns": "Promise<{ saved: boolean; uri?: string | undefined; }>",
+        "tags": [
+          {
+            "name": "param",
+            "text": "uri file://... путь из Capacitor Filesystem"
+          },
+          {
+            "name": "param",
+            "text": "album альбом/папка (опц.)"
+          }
+        ],
+        "docs": "Сохраняет файл в галерею.\nЕсли uri указывает на PDF — рендерит первую страницу в JPEG и сохраняет.\nЕсли uri указывает на JPEG/PNG — сохраняет как есть.",
+        "complexTypes": [],
+        "slug": "saveauto"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [],
+  "enums": [],
+  "typeAliases": [],
+  "pluginConfigs": []
+}
